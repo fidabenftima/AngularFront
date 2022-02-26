@@ -1,0 +1,30 @@
+<div class="container">
+    <hr>
+    <h2 align="center"> Liste des etudiants</h2>
+    <hr>
+</div>
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Identifiant</th>
+        <th scope="col">Firstname</th>
+        <th scope="col">Lastname</th>
+        <th scope="col">Update</th>
+        <th scope="col">Delete</th>        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of etudiants">
+        <td>{{c.id}}</td>
+        <td>{{c.firstname}}</td>
+        <td>{{c.lastname}}</td>
+        <td>
+            <a class="btn btn-success" (click)="update(c.id)">Update</a>
+        </td>
+        <td><a class="btn btn-danger" (click)="delete(c.id)">Delete</a>
+            
+        </td>
+      </tr>
+       
+    </tbody>
+  </table>

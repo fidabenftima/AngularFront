@@ -1,0 +1,18 @@
+<div class="container">
+    <hr>
+    <h2 align="center">Form etudiant</h2>
+</div>
+<form  (ngSubmit)="onSubmit()" >
+    <div hidden>
+        <input type="text" >
+    </div>
+    <div class="form-group">
+        <label for="firstname">Firstname</label>
+        <input type="text" [(ngModel)]="etudiant.firstname" [ngModelOptions]="{standalone:true}"class="form-control" id="firstname" placeholder="Enter firstname">
+    </div>
+    <div class="form-group">
+        <label for="lastname">Lastname</label>
+        <input type="text" class="form-control"  [(ngModel)]="etudiant.lastname" [ngModelOptions]="{standalone:true}"id="lastname" placeholder="Enter lastname">
+    </div> 
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
